@@ -60,7 +60,7 @@ namespace HotelSys.Controllers
         {
             string code = "R";
             Random rand = new();
-            List<Reservation> list = new();
+            List<Reservation> list;
 
             try
             {
@@ -69,7 +69,7 @@ namespace HotelSys.Controllers
 
                 if (code.Length > 10)
                 {
-                    code = "N" + (char)code[code.Length-10] + code.Substring(code.Length - 8, 8);
+                    code = "N" + (char)code[^10] + code.Substring(code.Length - 8, 8);
                 }
 
                 for(int i=code.Length; i<10; i++)
