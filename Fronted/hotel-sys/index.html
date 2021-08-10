@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html manifest="">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+	<title>HotelSys</title>
+
+  <script type="text/javascript">
+    var Ext = Ext || {};
+    Ext.beforeLoad = function (tags) {
+      var profile;
+      profile = 'desktop';
+      Ext.manifest ='generatedFiles/' + profile;
+    };
+  </script>
+  <script id="microloader" data-app="df9a2cda-ce24-4139-ac91-e09013cfbef2" type="text/javascript" src="generatedFiles/bootstrap.js"></script>
+</head>
+<body>
+  <div id="splash" style="margin-top:20%;font-family:Arial;font-size:64px;text-align:center;color:#404040;">
+    <div id="theLoadingText">LOADING...</div>
+    <i style="margin:20px;" class="fa fa-spinner fa-spin"></i>
+  </div>
+</body>
+</html>

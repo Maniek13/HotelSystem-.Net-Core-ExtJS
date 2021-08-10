@@ -1,0 +1,3 @@
+# HotelSys application
+
+moderndesktopminimal template
