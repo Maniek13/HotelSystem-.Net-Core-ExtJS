@@ -35,7 +35,6 @@ C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys\obj\Debug\net5.0\HotelSys.dl
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys\obj\Debug\net5.0\ref\HotelSys.dll
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys\obj\Debug\net5.0\HotelSys.pdb
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys\obj\Debug\net5.0\HotelSys.genruntimeconfig.cache
-C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys\obj\Debug\net5.0\HotelSys.csproj.GenerateResource.cache
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys2\bin\Debug\net5.0\web.config
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys2\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys2\bin\Debug\net5.0\appsettings.json
@@ -76,3 +75,4 @@ C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys2\obj\Debug\net5.0\HotelSys.g
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys2\obj\Debug\net5.0\HotelSys.Migrations.InitialCreate.resources
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys2\obj\Debug\net5.0\HotelSys.csproj.GenerateResource.cache
 C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys\obj\Debug\net5.0\HotelSys.Migrations.InitialCreate.resources
+C:\Users\mani3\Desktop\HotelSystem\Backend\HotelSys\obj\Debug\net5.0\HotelSys.csproj.GenerateResource.cache
