@@ -58,7 +58,9 @@ namespace HotelSys.Controllers
         [HttpPost]
         public JsonResult SetReservation([Bind("CheckIn, CheckOut, Price, Currency, Provision, Source")] Reservation reservation, [Bind("Users")] string users)
         {
-            string code = "R";
+            
+            string code = "R222345689";
+            string newCode = "";
             Random rand = new();
             List<Reservation> list;
 
@@ -71,13 +73,16 @@ namespace HotelSys.Controllers
                 {
                     int temp = code.Length - 10;
 
-                    if(temp > 9)
+                    if(temp < 9)
                     {
+
                         for (int i = temp; i > 0; --i)
                         {
-                            code += (char)code[^(9 + i)];
+                            int z = Convert.ToInt32(code.Substring(code.Length - (9 + i),1));
+                            newCode += (char)(64+z);
                         }
-                        code += code.Substring(code.Length - 8 - temp, 9 - temp);
+                        newCode += code.Substring(code.Length - 8 - temp, 9 - temp);
+                        code = newCode;
                     }
                     else
                     {
