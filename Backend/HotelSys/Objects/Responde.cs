@@ -2,7 +2,7 @@
 using HotelSys.Models;
 using System.Collections.Generic;
 
-namespace HotelSys.Elements
+namespace HotelSys.Objects
 {
     public class Responde : IResponde
     {

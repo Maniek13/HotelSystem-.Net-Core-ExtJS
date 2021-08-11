@@ -1,10 +1,10 @@
 ﻿using HotelSys.DAL;
 using HotelSys.Models;
+using HotelSys.Objects;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using HotelSys.Elements;
 
 namespace HotelSys.Controllers
 {
@@ -58,44 +58,15 @@ namespace HotelSys.Controllers
         [HttpPost]
         public JsonResult SetReservation([Bind("CheckIn, CheckOut, Price, Currency, Provision, Source")] Reservation reservation, [Bind("Users")] string users)
         {
-            
-            string code = "R";
-            string newCode = "N";
-            Random rand = new();
             List<Reservation> list;
 
             try
             {
                 list =  _context.Reservations.ToList();
-                code += list.Last().Id + 1 + "C";
 
-                if (code.Length > 10)
-                {
-                    int temp = code.Length - 10;
-
-                    if(temp < 9)
-                    {
-
-                        for (int i = temp; i > 0; --i)
-                        {
-                            int z = Convert.ToInt32(code.Substring(code.Length - (9 + i),1));
-                            newCode += (char)(64+z);
-                        }
-                        newCode += code.Substring(code.Length - 8 - temp, 9 - temp);
-                        code = newCode;
-                    }
-                    else
-                    {
-                        throw new StackOverflowException("Idex of reservations is out of range, can't create reservation code");
-                    }
-              
-                }
-
-                for(int i=code.Length; i<10; i++)
-                {
-                    code += rand.Next(0, 10);
-                }
-
+                CodeGenertor codeGen = new();
+                string code = codeGen.Generate(list.Last().Id);
+            
                 reservation.ReservationCode = code;
                 reservation.Created = DateTime.Now;
 
