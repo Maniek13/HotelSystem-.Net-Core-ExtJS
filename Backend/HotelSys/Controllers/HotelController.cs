@@ -59,7 +59,7 @@ namespace HotelSys.Controllers
         public JsonResult SetReservation([Bind("CheckIn, CheckOut, Price, Currency, Provision, Source")] Reservation reservation, [Bind("Users")] string users)
         {
             
-            string code = "R222345689";
+            string code = "R";
             string newCode = "";
             Random rand = new();
             List<Reservation> list;
