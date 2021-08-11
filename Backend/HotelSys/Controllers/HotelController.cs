@@ -11,10 +11,8 @@ namespace HotelSys.Controllers
     [Produces("application/json")]
     public class HotelController : Controller
     { 
-    
         private readonly HotelSysContext _context = new();
         private readonly Responde responde = new();
-
 
         public string Index()
         {

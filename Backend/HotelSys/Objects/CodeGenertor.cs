@@ -39,8 +39,7 @@ namespace HotelSys.Objects
                 this.code += rand.Next(0, 10);
             }
 
-
             return this.code;
-            }
         }
     }
+}
