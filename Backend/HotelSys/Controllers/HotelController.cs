@@ -60,7 +60,7 @@ namespace HotelSys.Controllers
         {
             
             string code = "R";
-            string newCode = "";
+            string newCode = "N";
             Random rand = new();
             List<Reservation> list;
 
