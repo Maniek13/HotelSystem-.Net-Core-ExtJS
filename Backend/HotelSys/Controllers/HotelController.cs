@@ -69,7 +69,21 @@ namespace HotelSys.Controllers
 
                 if (code.Length > 10)
                 {
-                    code = "N" + (char)code[^10] + code.Substring(code.Length - 9, 8);
+                    int temp = code.Length - 10;
+
+                    if(temp > 9)
+                    {
+                        for (int i = temp; i > 0; --i)
+                        {
+                            code += (char)code[^(9 + i)];
+                        }
+                        code += code.Substring(code.Length - 8 - temp, 9 - temp);
+                    }
+                    else
+                    {
+                        throw new StackOverflowException("Idex of reservations is out of range, can't create reservation code");
+                    }
+              
                 }
 
                 for(int i=code.Length; i<10; i++)
