@@ -1,6 +1,5 @@
 ﻿using HotelSys.Interfaces;
 using HotelSys.Models;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace HotelSys.Elements
