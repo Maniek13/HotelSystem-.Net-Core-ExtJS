@@ -69,7 +69,7 @@ namespace HotelSys.Controllers
 
                 if (code.Length > 10)
                 {
-                    code = "N" + (char)code[^10] + code.Substring(^9, 8);
+                    code = "N" + (char)code[^10] + code.Substring(code.Length - 9, 8);
                 }
 
                 for(int i=code.Length; i<10; i++)
