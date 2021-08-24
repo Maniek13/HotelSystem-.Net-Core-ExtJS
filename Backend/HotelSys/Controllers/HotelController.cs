@@ -36,13 +36,13 @@ namespace HotelSys.Controllers
             return Json(responde);
         }
 
-        public JsonResult GuestsNamedPiotr()
+        public JsonResult GetGuestsByName(string name)
         {
             try
             {
                 responde.Code = 100;
                 responde.Message = "Ok";
-                responde.Guests = _context.Guests.ToList().Where(a => a.Name == "Piotr");
+                responde.Guests = _context.Guests.ToList().Where(a => a.Name == name);
             }
             catch (Exception e)
             {
